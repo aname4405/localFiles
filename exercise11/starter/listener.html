@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style>
+            table, td {
+              border: 1px solid black;
+              padding: 20px;
+            }
+
+            </style>
+
+        <script>
+            //let action = function(e){
+            //    alert(789)
+            //    console.log(e)
+            //}
+
+
+//got data in this data object here
+            let data = {};
+
+            let dataBind = function(){
+
+            }
+            //extend this function to include additional functions
+            dataBind.set = function(key,value){
+                data[key] = value;
+
+            }
+
+            dataBind.get = function(key){
+                return data[key];
+            }
+
+            dataBind.display = function() {
+                document.querySelectorAll('[name], [data]').forEach((item)=>{
+                    //console.log(item.value, item.innerText)
+                    //let key = item.name; 
+                    //|| item.xyz ? adsf
+                    //if(key == undefined){
+                    //    key = item.getAttribute("data");
+                    //}
+                    //shorter way to above code:
+                    //let key = item.name || item.getAttribute("data");
+                    //console.log(key);
+
+
+                    //if (item.innerText) = data[key];
+
+
+                    //function to get data from input field on form and put this
+                    //data into vairable then put use the method to display that data
+                    //on the webpage.
+                    //if the item does not have a name - then ...
+                    //example of databind: https://www.w3schools.com/js/js_function_bind.asp
+                
+                    if(item.name == undefined){
+                        let key = item.getAttribute("data");
+                        if (data[key] !== undefined){
+                            item.innerText = data[key];
+                        }
+                    }
+                    else {
+                        item.value = data[item.name];
+                    }
+                    
+                });
+            }
+
+
+            //function to get choice for input type from user and add this to the form
+            let addInput = function(input) {
+                                
+            }
+
+           /* let addItem = function() {
+                let node = document.createElement("div");
+                node.innerHTML = `<span>Item</span> - <span>Item</span>`;
+                document.getElementById('itemList').appendChild(node);
+                //document.getElementById('itemList').innerHTML +=
+                //`<div>
+                //    <span>Item</span> - <span>Item</span>
+                //    </div>`;
+            }*/
+
+
+            let addItem = function(templateName){
+                let template = document.querySelector(`[data-template="${templateName}"]`).innerHTML;
+                let node = documnet.createElement("div");
+                node.innerHTML = template;
+                document.getElementById('itemList').appendChild(node);
+            }
+
+
+            window.addEventListener("load", function(){
+
+                dataBind.display();
+
+                document.querySelector('form').addEventListener('input', function(e)
+                {
+                //removed console.log(e.target.name)
+                //removed data[e.target.name] = e.target.value; and placed in dataBind.
+                    dataBind.set(e.target.name, e.target.value);
+                    dataBind.display();
+                })
+                
+                document.querySelector('addInput').addEventListener('onclick', function(addInput)
+                {
+                        
+                }
+                
+                )
+
+            })
+
+            function myFunction() {
+                var table = document.getElementById("myTable");
+                var row = table.insertRow(0);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                cell1.innerHTML = "";
+                cell2.innerHTML = "";
+}
+
+      
+
+
+
+        </script>
+
+    </head>
+    <body>
+
+        <form>
+            <button>Click me</button>
+            <button>Click me</button>
+            <input name="telephone" />
+            <input name ="address"  />
+        </form>
+
+        <template data-template="data-template">
+            <span>Item</span>
+            <span>-</span>
+            <span><input name='telephone' /></span>
+        </template>
+
+
+        <br><label for="input">Choose an input type to add to the form:</label>
+
+        <br><select name="input">
+            <option value="text">text</option>
+            <option value="number">number</option>
+            <option value="date">date</option>
+        </select>
+
+        <h1 data="telephone"></h1>
+        
+        <input name="telephone" />
+
+        <textarea name="telephone"></textarea>
+
+        <br><br>
+
+       <!-- <button name="addInput">Add an input</button>-->
+
+        <div id="itemList">
+        </div>
+
+        <input type="button" value="Add Item" 
+            onclick="addItem()"
+        />
+
+        <br><br>
+
+        <table id="myTable">
+            <tr>
+              <td>Row1 cell1</td>
+              <td>Row1 cell2</td>
+            </tr>
+            <tr>
+              <td>Row2 cell1</td>
+              <td>Row2 cell2</td>
+            </tr>
+            <tr>
+              <td>Row3 cell1</td>
+              <td>Row3 cell2</td>
+            </tr>
+          </table>
+          <br>
+
+
+          <button type="button" onclick="myFunction()">add another row</button>
+               
+
+    </body>
+</html>
+
+<!--Build data in form 
+
+represent same data in several places
+describe the change in one place
+data binding.
+
+-->

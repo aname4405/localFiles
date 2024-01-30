@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<script>
+    window.addEventListener("load", function(){
+        document.querySelector('button').addEventListener("click", function(){
+            alert(789)
+        })
+    })
+
+    //if script is in the head section - 
+    //it executes before the body is loaded - so button does not exist
+    //to get around have onload event - so the page loads before the script
+    //is executed.
+    //defer attribute on script. <script src="demo_defer.js" defer></script>
+
+</script>
+    </head>
+    <body onload="alert('this page is loaded')">
+
+        <img src="image.gif" onerror="myFunction()">
+        <p id="demo"></p>
+
+        <button onclick="alert(123)">Click me</button>
+
+        <p onclick="alert(123)">Click me</p>
+
+        <input type="text" oninput="console.log(this.value)" />
+
+        <input type="text" onchange="alert(entered)" />
+
+        <input type="text" onkeydown="alert(1243)" />
+            
+
+<script>
+    function myFunction(){
+        document.getElementById("demo").innerHTML = "The image could not be loaded.";
+    }
+
+    document.querySelector('button').onclick = function(){alert("Ouch ... you clicked me!")}
+
+    document.querySelector('input').oninput = function() {console.log(this.value)}
+
+    document.querySelector('input').oninput=function(e){
+        console.log(this.value)
+        console.log(e)
+    }
+    
+</script>
+
+      
+        
+    </body>
+</html>
