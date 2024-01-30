@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+    <h1>Hello!</h1>
+    <form name="detailsForm">
+        <fieldset>
+            <legend>Your Details</legend>
+            <input class="data" id= "firstName" name="firstName" type="text" />
+            <input class="data" id= "secondName" name="secondName" type="text" />
+            <input class="data" id= "dob" name="dob" type="date" />
+            <input class="data" id= "phone" name="phone" type="tel" />            
+        </fieldset>
+        <button onclick = getData()>Submit</button>
+
+    </form>
+<script>
+
+    function getData(){
+    let data = document.querySelectorAll('.data');
+    console.log(data);
+}
+
+
+        //get all data
+        //function getData(){
+           // var data = 
+        //}
+        //build the object
+
+       // function buildPerson(data){
+        
+
+        //person = {
+           // "firstName": document.querySelector('#firstName'),
+           // "secondName": document.querySelector('#secondName'),
+           // "dob": document.querySelector('#dob'),
+           // "phone": document.querySelector('#phone')
+      //  }
+    
+     //   console.log(JSON.stringify(person));    
+   // }
+
+    //autobuild object
+
+    /*function buildP(placeholder, num) {
+    let i = 0;
+
+    do {
+        let p = document.createElement('p');
+        let text = document.createTextNode(`Have you tried turning it off and back on again?`);
+
+        p.appendChild(text);
+        p.style.color = colours[parseInt(Math.random() * colours.length)];
+        placeholder.appendChild(p);
+        i++;
+    } while (i < num);
+}
+
+buildP(document.querySelector('#placeholder'), 6);*/
+
+</script>
+
+    </body>
+</html>

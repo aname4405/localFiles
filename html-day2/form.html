@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <h1>Form</h1>
+        <form action="http://www.nextpoint.co.uk/test.php" method=post>
+
+            <label>How good is this form?:
+            <span>Bad</span><input type="range" max="5" min="2" step="0.1" value="5" name="range"/><span>Good</span>
+            
+            <br><br><label>
+            Check this box if you want further information:<input type="checkbox" value="Yes" name="checkbox"/>
+            
+            <br><br><label>Do you like this form?
+            <span>Yes</span><input type="radio" value="Yes" name="radio"/>
+            <span>No</span><input type="radio" value="No" name="radio" /></label>
+            
+            <br><br><label>Select a colour:
+            <input type="color" value="#ff0000" name="colour" />
+            </label>
+            
+            <br><br><label>Date of birth:
+            <input type="date" value="2024-01-01" name="dob" />
+            </label>
+            
+            <br><br><label>Enter your email:
+                <input type="email" value="abc@email.com" name="email"/>
+            <input type="button" value="Click Me!" />
+            </label>
+            
+            <br><br><fieldset>
+                <legend>Username and Password</legend>
+                <label><span>Username:</span>
+                <input type="text" placeholder="Username" name="username" required/>
+            </label>
+            
+            <br><br><label><span>Password:</span>
+            <input type="password" placeholder="password" name="password" required/>
+            </label>
+            </fieldset>
+
+            <br><br><fieldset>
+                <legend>Address Details</legend>
+                <br><label>Date moved to address:
+                <input type="month" value="2024-01" name="dmi"/>
+                </label>
+
+            <br><br><label><span>Enter your address:</span>
+            <br><br><textarea placeholder="your address here" autofocus name="address" id="address" cols="30" rows="10"></textarea>
+            </label>
+
+            <br><br><label><span>Upload your tenancy agreement:</span>
+                <input type="file" name="file"/>
+            </label>
+            </fieldset>
+            
+            <br><br><label>Please select your faviourite colour:
+            <br><br><select name="favourite-colour" id="favourite-colour">
+                <option value="">---</option>
+                <option value="">red</option>
+                <option value="">green</option>
+                <option value="">yellow</option>
+                <option value="">blue</option>
+            </select>
+            </label>
+
+            <br><br><input type="submit" value="Go!" />
+
+            <br><br><button>Submit</button>
+
+        </form>
+    </body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS</title>
+
+        <style>
+            p{
+                color: blue;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            h1{
+                color: black;
+                font-family: Arial;
+                background-color: rgb(122, 119, 119);
+                padding: 75px;
+                font-size: 50px;
+                text-align: center;
+                background-image: linear-gradient(to bottom right, purple, pink);
+            }
+            strong{
+                background: black;
+                color: white;                
+            }
+            #p2{
+                color: green;
+            }
+            
+            fieldset{
+                background-color: pink;
+                font-size: 30px;
+                border-radius: 25px;
+                border-color: purple;
+            }
+
+
+            fieldset:hover{
+                background-color: deeppink;
+                border-color: black;
+                border-radius: 1px;
+            }
+
+            legend{
+                color: black;
+            }
+            #f2{
+                background-color: rgb(153, 58, 74);
+            }
+            .highlight{
+                background: yellow;
+            }
+            .small{
+                font-size: small;
+            }
+            .big{
+                font-size: 75px;
+            }
+
+            [type="text"]{
+                display: inline-block;
+                width: 40em;
+            }
+
+            [type="number"]{
+                color: white;
+                background-color: black;
+                display: inline-block;
+                width: 4em;
+            }
+
+            [type="range"]{
+                display: inline-block;
+                width: 80em;
+            }
+
+            [href*="google" i]{
+                color: red;
+            }
+
+            [href]:hover{
+                background-color: cadetblue;
+            }
+
+            [href*="bing" i]{
+                background: white;
+
+            }
+
+            .green{
+                background-color: greenyellow;
+            }
+
+            #notice{
+                display: flex;
+                flex-direction: row;
+                gap: 2em;
+                background: red;
+                width: 50vw;
+                overflow: auto;
+                padding: 2em;
+                margin-top: 50px;
+            }
+
+            #notice:hover {
+                background: orange;
+            }
+
+            #notice p {
+                color: white;
+            }
+
+            #notice > a {
+                text-decoration: underline;
+                color: white;
+                font-size: 40px;
+            }
+
+            .flex-container {
+                display: flex;
+                 background-color: DodgerBlue;
+            }
+
+            .flex-container > div {
+                background-color: #f1f1f1;
+                margin: 10px;
+                padding: 20px;
+                font-size: 30px;
+            }
+
+            .animated:hover{
+                animation: barrel-roll 5s;
+            }
+
+            @keyframes barrel-roll {
+                0% {
+                    transform:rotate(0deg);
+                }
+
+                50%{
+                    transform: rotate(90deg);
+
+                }
+
+                75% {
+                    transform: rotate(180deg);
+                }
+
+                100%{
+
+                    transform: rotate(360deg);
+                }
+            }
+                        
+        </style>
+
+    </head>
+    <body>
+        
+        <main>
+            <h1>Hello!</h1>
+            <fieldset>
+                <p>This is <strong>content</strong>...</p>
+                <p id="p2">This is content...</p>
+                <p class="highlight small">This is content...</p>
+            </fieldset>
+
+            <fieldset id="f2">
+                <legend class="big">News</legend>
+                <p>Some news here...</p>
+            </fieldset>
+
+            <br><br><fieldset>
+                <form>
+                    <input type="text">
+                    <br><input type="number">
+                    <br><input type="range">
+                </form>
+            </fieldset>
+
+            <br><br><fieldset class="green">
+                <a href="https://www.google.com/">Google</a>
+                <a href="https://www.google.com/">Google</a>
+                <a href="https://www.bing.com/">Bing</a>
+                <a href="https://www.Google.com/">Google</a>
+                <a href="https://www.google.com/">Google</a>
+            </fieldset>
+
+        </main>
+
+        <section id="notice">
+            <p>This is content...</p>
+            <p><a>This is content...</a></p>
+            <p>This is content...</p>
+            <a>This is content....................................overflow!</a>
+        </section>
+
+        <h1 class="animated">Create a Flex Container</h1>
+
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>  
+            </div>
+
+
+    </body>
+</html>

@@ -1,0 +1,13 @@
+create a form for your web application.
+
+create a javascript function that will:
+*capture all the input elements.
+*build an object that describes the data values of all input elements.
+*outputs the description of the data form to the console as JSON.
+
+
+Useful commands:
+
+document.querySelectorAll()
+
+Demonstrate how a new web page element can be added to the page.

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transistions</title>
+
+        <style>
+
+            html {
+                background: black;
+            }
+
+            h1 {
+                background: red;
+                transition: all 1s, linear 2s;
+            }
+
+            h1:hover{
+                background: blue;
+                padding-left: 3em;
+            }
+
+            ul {
+                color: black;
+                transition: all 5s ease-in;
+                font-size: 40px;
+            }
+
+            ul:hover {
+                color: chartreuse;
+                font-size: 100px;
+                padding-left: 3em;
+                background: burlywood;
+            }
+
+            .hover {
+                background: yellow;
+                color: red;
+                transition: background 1s linear 0s,
+                padding 1s linear 0s,
+                color 1s linear 0s;
+            }
+
+
+            .animated{
+                animation: barrel-roll 5s;
+            }
+
+            @keyframes barrel-roll {
+                0% {
+                    transform:rotate(0deg);
+                }
+
+                50%{
+                    transform: rotate(90deg);
+
+                }
+
+                75% {
+                    transform: rotate(180deg);
+                }
+
+                100%{
+
+                    transform: rotate(360deg);
+                }
+            }
+
+            p{
+                color: white; 
+                font-size: 50px;
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+
+        <h1 class="hover">Hello!</h1>
+
+        <ul>
+            <a href="css.html">CSS page</a>
+           
+        </ul>
+
+        <p class="animated">BOO!</p>
+        
+    </body>
+</html>
